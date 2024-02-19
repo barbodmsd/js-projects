@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/Rider-App-Icon_iOS.svg">
+    <title>Earn Mony by driving or Get a Car</title>
+  </head>
+  <body>
+    <header>
+      <!-- start nav -->
+      <nav>
+        <ul>
+          <li id="uber"><a href="#">Uber</a></li>
+          <li id="company">
+            <a href="#"
+              >Company <i id="drop-down-icon" class="bx bx-chevron-down"></i
+            ></a>
+            <ul id="drop-down">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Our offerings</a></li>
+              <li><a href="#">How uber works</a></li>
+              <li><a href="#">Global citizenship</a></li>
+              <li><a href="#">Newsroom</a></li>
+              <li><a href="#">Investor relations</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Safety</a></li>
+          <li>
+            <a href="#"><i class="bx bx-help-circle"></i>Help</a>
+          </li>
+        </ul>
+        <ul>
+          <li id="en">
+            <a href="#"><i class="bx bxl-codepen"></i>EN</a>
+          </li>
+          <li id="products">
+            <a href="#"><i class="bx bxs-component"></i>Products</a>
+            <div id="scroll-drop-down">
+              <ul>
+                <li>
+                  <i class="scroll-icon bx bx-home-alt"></i><a href="#">Home</a>
+                </li>
+                <li>
+                  <i class="scroll-icon bx bxs-car"></i><a href="#">Car</a>
+                </li>
+                <li>
+                  <i class="scroll-icon bx bx-color"></i><a href="#">Drive</a>
+                </li>
+                <li>
+                  <i class="scroll-icon bx bx-fork"></i><a href="#">Eat</a>
+                </li>
+                <li>
+                  <i class="scroll-icon bx bxs-wine"></i
+                  ><a href="#">Merchants</a>
+                </li>
+                <li>
+                  <i class="scroll-icon bx bxs-truck"></i
+                  ><a href="#">Freight</a>
+                </li>
+                <li>
+                  <i class="scroll-icon bx bx-bus"></i><a href="#">Transit</a>
+                </li>
+                <li>
+                  <i class="scroll-icon bx bxs-shopping-bags"></i
+                  ><a href="#">Business</a>
+                </li>
+                <li>
+                  <i class="scroll-icon bx bx-money"></i><a href="#">Money</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="login">
+            <a href="#front-card"><i class="bx bx-log-in"></i>Log in</a>
+          </li>
+          <li class="login" id="sign"><a href="#back-card">Sign up</a></li>
+        </ul>
+        <i id="hamburger-menu" class="bx bx-menu"></i>
+       
+      </nav>
+      <section id="menu" >
+        <ul>
+          <i class='bx bx-x' id="close-menu"></i>
+          <li><a href="#">Company</a></li>
+          <li><a href="#">Safety</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">EN</a></li>
+          <li><a href="#">Product</a></li>
+        </ul>
+      </section>
+      <!-- start the modal to down up -->
+      <section id="form-section">
+        <div>
+          <i id="close-btn" class="bx bx-x"></i>
+          <!-- the 3D card /form -->
+          <div id="perspective">
+            <div id="card">
+              <!-- front the form -->
+              <div id="front-card">
+                <h2>Welcome back</h2>
+                <form class="form">
+                  <input
+                    required
+                    placeholder="Email:"
+                    type="email"
+                    id="email-front"
+                  />
+                  <input
+                    required
+                    class="pass-inp"
+                    placeholder="Password:"
+                    type="password"
+                  />
+                  <i class="bx bx-show pass-icon" id="pass-icon-front"></i>
+                  <a href="#">forget password?</a>
+                  <span
+                    >Don't have an acount?<a
+                      class="rotate-btn"
+                      href="#back-card"
+                      >Sign up</a
+                    ></span
+                  >
+                  <button id="login-btn" type="submit">Log in</button>
+                  <button class="google-btn">
+                    <i class="bx bxl-google" class="google-icon"></i> Log in
+                    with google
+                  </button>
+                </form>
+              </div>
+              <!-- end front form -->
+
+              <!-- back the form -->
+              <div id="back-card">
+                <h2>Create Acount</h2>
+                <form class="form">
+                  <span>Let's get statred with your 30 days free trial</span>
+                  <input
+                    required
+                    id="username"
+                    placeholder="Name:"
+                    type="username"
+                  />
+                  <input required placeholder="Email:" type="email" />
+                  <input
+                    required
+                    class="pass-inp"
+                    placeholder="password:"
+                    type="password"
+                  />
+                  <i class="bx bx-show pass-icon" id="pass-icon-back"></i>
+                  <span
+                    >Already have an account?<a
+                      href="#front-card"
+                      class="rotate-btn"
+                      >Log in</a
+                    ></span
+                  >
+                  <button id="sign-btn">Create acount</button>
+                  <button class="google-btn">
+                    <i class="bx bxl-google" id="google-icon"></i> Sign up with
+                    Google
+                  </button>
+                </form>
+                <!-- end back form -->
+              </div>
+            </div>
+          </div>
+          <!-- end 3D card -->
+        </div>
+      </section>
+      <!-- end the modal to down up -->
+      <!-- end nav -->
+      <!-- start first banner -->
+      <section id="first-banner">
+        <div id="text">
+          <!-- dynamic words -->
+          <div id="welcome"></div>
+          <h1>
+            Go anywhere with <br />
+            Uber
+          </h1>
+          <p>Request a ride, hop in, and go.</p>
+          <i class="bx bx-radio-circle icon-banner" id="circle"></i>
+          <input type="text" placeholder="Enter Location" id="location" />
+          <i class="bx bxs-navigation" id="send"></i>
+          <i class="bx bx-square icon-banner" id="Square"></i>
+          <input type="text" placeholder="Enter Destination" id="destination" />
+          <a href="#" id="see-price">See Price</a>
+        </div>
+        <img class="image-banner" src="assets/Ride-with-Uber.webp" alt="" />
+      </section>
+      <!-- end first banner -->
+    </header>
+
+    <main>
+      <!-- its icon arrow to navigation -->
+      <a id="top" href="#company"
+        ><i id="top-icon" class="bx bx-up-arrow-alt"></i
+      ></a>
+      <!-- end icon to top -->
+      <!-- work with api -->
+      <section id="api-products">
+        <h1>Work with api</h1>
+        <div id="search-products">
+          <input placeholder="Enter number 1-20:" type="text" />
+          <button>Search</button><i class="bx bx-refresh"></i>
+        </div>
+        <div id="btns"></div>
+        <div id="item-product"></div>
+      </section>
+      <!-- end work with api -->
+      <!-- here is the second banner -->
+      <section id="second-banner">
+        <img class="image-banner" src="assets/drive.webp" alt="" />
+        <div id="drive">
+          <h2>
+            Drive when you <br />
+            want, make what <br />
+            you need
+          </h2>
+          <p>
+            Make money on your schedule with deliveries or rides—or<br />
+            both. You can use your own car or choose a rental <br />
+            through Uber.
+          </p>
+          <div id="started" class="started">
+            <a href="#" class="link-btn">Get started</a>
+            <p><a href="#">Already have an account? Sign in</a></p>
+          </div>
+        </div>
+      </section>
+      <!-- end second banner -->
+      <!-- start third banner -->
+      <section id="third-banner">
+        <div id="uber-text">
+          <h2>
+            The Uber you <br />
+            know, reimagined <br />
+            for business
+          </h2>
+          <p>
+            Uber for Business is a platform for managing global rides and meals,
+            and <br />
+            local deliveries, for companies of any size.
+          </p>
+          <div class="started">
+            <a href="#" class="link-btn">Get started</a>
+            <p><a href="#">Check out our solutions</a></p>
+          </div>
+        </div>
+        <img class="image-banner" src="assets/uber.webp" alt="" />
+      </section>
+      <!-- end third banner -->
+      <!-- start auto slider -->
+      <section id="auto-slider">
+        <div>
+          <img src="assets/slider-3.webp" alt="" />
+        </div>
+        <div>
+          <img src="assets/slider-4.webp" alt="" />
+        </div>
+        <div class="show-slider">
+          <img src="assets/slider-7.jpeg" alt="" />
+        </div>
+        <div>
+          <img src="assets/slider-5.jpg" alt="" />
+        </div>
+        <div>
+          <img src="assets/slider-2.webp" alt="" />
+        </div>
+        <div>
+          <img src="assets/slider-1.jpeg" alt="" />
+        </div>
+      </section>
+      <!-- end auto slider -->
+      <!-- start auto slider mobile -->
+      <section id="auto-slider-mobile">
+        <div class="show-slider-mobile">
+          <img src="assets/slider-mobile-5.jpeg" alt="" />
+        </div>
+        <div><img src="assets/sliedr-mobile-3.jpeg" alt="" /></div>
+        <div><img src="assets/slider-mobile-6.jpeg" alt="" /></div>
+        <div><img src="assets/slider-mobile-1.jpeg" alt="" /></div>
+        <div><img src="assets/slider-mobille-2.webp" alt="" /></div>
+        <div><img src="assets/slider-mobile-4.webp" alt="" /></div>
+      </section>
+      <!-- end auto slider  mobile-->
+      <!-- its the QR-Code Scan -->
+      <section id="qr-code">
+        <h2>It’s easier in the apps</h2>
+        <div>
+          <div>
+            <img src="assets/qrcode.png" alt="" />
+            <img
+              src="assets/Rider-App-Icon_iOS.svg"
+              class="uber-qr-code"
+              alt=""
+            />
+            <div>
+              <h2>Download the uber app</h2>
+              <p>Scan to download</p>
+            </div>
+            <i class="bx bx-right-arrow-alt arrow"></i>
+          </div>
+          <div>
+            <img src="assets/qrcode.png" alt="" />
+            <img
+              src="assets/Driver-App-Icon_iOS.svg"
+              class="uber-qr-code"
+              alt=""
+            />
+            <div>
+              <h2>Download the uber app</h2>
+              <p>Scan to download</p>
+            </div>
+            <i class="bx bx-right-arrow-alt arrow"></i>
+          </div>
+        </div>
+      </section>
+      <!-- end QR-Code Scan -->
+    </main>
+    <footer>
+      <!-- start imprint -->
+      <section id="Imprint">
+        <div>
+          <h1><a href="#">Uber</a></h1>
+          <p><a href="#">Open help center</a></p>
+        </div>
+        <div>
+          <ul>
+            <li><a href="#">Imprint travel agency</a></li>
+            <li><a href="#">Imprint Eats</a></li>
+            <li>
+              <a href="#"
+                >This is how the Uber and Uber Eats apps and websites work</a
+              >
+            </li>
+            <li><a href="#">Cancel Uber One</a></li>
+          </ul>
+        </div>
+      </section>
+      <!-- end imprint -->
+      <!-- start products -->
+      <section id="products-ul">
+        <div>
+          <ul>
+            <h2>Pursue</h2>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our offers</a></li>
+            <li><a href="#">Newsroom</a></li>
+            <li><a href="#">investors</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Career</a></li>
+            <li><a href="#">AI</a></li>
+            <li><a href="#">Gift cards</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <h2>Products</h2>
+            <li><a href="#">Drive</a></li>
+            <li><a href="#">Offer rides</a></li>
+            <li><a href="#">Offer deliveries</a></li>
+            <li><a href="#">Eat</a></li>
+            <li><a href="#">Uber for Business</a></li>
+            <li><a href="#">Uber Freight</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <h2>Global commitment</h2>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Diversity and inclusion</a></li>
+            <li><a href="#">sustainability</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <h2>Travel</h2>
+            <li><a href="#">Reservations</a></li>
+            <li><a href="#">Airports</a></li>
+            <li><a href="#">Cities</a></li>
+          </ul>
+        </div>
+      </section>
+      <!-- end products -->
+      <!-- start icon ul -->
+      <section id="icon-ul">
+        <div>
+          <ul>
+            <li>
+              <a href="#"><i class="footer-icon bx bxl-facebook-square"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="footer-icon bx bxl-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="footer-icon bx bxl-youtube"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="footer-icon bx bxl-linkedin-square"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="footer-icon bx bxl-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li class="german">
+              <a href="#"><i class="bx bxl-codepen"></i>German</a>
+            </li>
+            <li class="german">
+              <a href="#"
+                ><i class="bx bxs-been-here"></i>San Francisco Bay Area</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- end icon ul -->
+      <div>
+        <a href="#">
+          <img
+            width="150px"
+            height="70px"
+            src="assets/app-store-google-4d63c31a3e.svg"
+            alt=""
+          />
+        </a>
+        <a href="#">
+          <img
+            width="150px"
+            height="70px"
+            src="assets/app-store-apple-f1f919205b.svg"
+          />
+        </a>
+      </div>
+      <section id="Technologies">
+        <div><p>© 2024 Uber Technologies Inc.</p></div>
+        <div>
+          <ul>
+            <li>Datenschutz</li>
+            <li>Barrierefreiheit</li>
+            <li>Nutzungsbedingungen</li>
+          </ul>
+        </div>
+      </section>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

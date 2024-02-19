@@ -1,0 +1,997 @@
+:root {
+  --fontSize-title: 3.5em;
+  --gap: 50px;
+  --padding-banner: 0 50px;
+  --width-text: 550px;
+  --height-text: 500px;
+}
+
+@font-face {
+  font-family: uber;
+  src: url("../font/Blinker-Bold.eot") format("eot"),
+    url("../font/Blinker-Bold.ttf") format("ttf"),
+    url("../font/Blinker-Bold.woff") format("woff"),
+    url("../font/Blinker-Bold.woff2") format("woff2");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 2000px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: black;
+}
+/* start nav */
+#hamburger-menu {
+  font-size: 25px;
+  color: white;
+  display: none;
+}
+nav {
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 70px;
+}
+nav > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+nav > ul > li {
+  border-radius: 20px;
+  padding: 10px;
+  transition: all 0.5s;
+  position: relative;
+}
+nav > ul > li:hover:not(#uber),
+#see-price:hover {
+  background-color: grey;
+}
+nav > ul > li > a {
+  color: white;
+}
+#uber a {
+  font-size: 1.6em;
+}
+#sign {
+  background-color: white;
+}
+#sign a {
+  color: black;
+}
+#drop-down {
+  position: absolute;
+  background-color: white;
+  width: 200px;
+  margin-top: 18px;
+  border-radius: 5px;
+  padding: 15px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  height: 0;
+}
+
+#drop-down li {
+  padding-left: 15px;
+}
+#drop-down li a {
+  transition: all 0.5s;
+}
+#drop-down li:hover {
+  background-color: rgba(239, 237, 237, 0.547);
+  cursor: pointer;
+}
+#drop-down li:hover a {
+  color: black;
+}
+/* add classList in js */
+.show-drop-down {
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: 320px !important;
+}
+#drop-down-icon {
+  transition: all 0.5s;
+}
+.drop-down-icon-rotate {
+  transform: rotateZ(180deg);
+}
+#drop-down li a {
+  color: grey;
+  margin: 10px;
+  display: inline-block;
+}
+
+#products {
+  position: relative;
+}
+#scroll-drop-down {
+  margin-top: 20px;
+  right: 100%;
+  transform: translateX(70px);
+  position: absolute;
+  background-color: white;
+  width: 250px;
+  height: 0;
+  overflow-y: scroll;
+  transition: all 0.5s;
+  z-index: 1000;
+}
+/* add classList in js */
+.scroll-drop-down-show {
+  height: 350px !important;
+}
+#scroll-drop-down ul li {
+  padding: 30px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+#scroll-drop-down ul li:hover {
+  background-color: rgba(239, 237, 237, 0.547);
+}
+#scroll-drop-down ul li a {
+  color: black;
+  font-size: 1.5em;
+  margin-left: 15px;
+}
+.scroll-icon {
+  font-size: 1.5em;
+}
+/* menu */
+#menu {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  left: 100%;
+  top: 0;
+  transition: all 0.5s;
+  z-index: 1000;
+}
+.show-menu{
+  left: 0 !important;
+}
+#menu ul li a {
+  color: black;
+  font-size: 25px;
+  margin-top: 10px;
+}
+#menu ul li {
+  border-bottom: 1px solid grey;
+  padding: 20px;
+}
+#close-menu {
+  font-size: 30px;
+  margin: 10px;
+}
+#form-section {
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.291);
+  transition: all 0.5s;
+}
+#form-section > div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* add classList in js */
+.show-form-section {
+  bottom: 0 !important;
+}
+#close-btn {
+  font-size: 3em;
+  color: white;
+  position: absolute;
+  right: 5%;
+  top: 10%;
+  cursor: pointer;
+  box-shadow: 0 0 3px grey;
+}
+#perspective {
+  width: 350px;
+  height: 480px;
+  perspective: 1000px;
+  margin: 100px auto;
+}
+#card {
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+  background-color: white;
+  transition: all 0.5s;
+  position: relative;
+}
+/* add classList in js */
+.rotate-card {
+  transform: rotateY(180deg) !important;
+}
+#front-card,
+#back-card {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  text-align: center;
+  padding: 20px 30px;
+}
+#front-card form,
+#back-card form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#front-card form input,
+#front-card form button,
+#back-card form input,
+#back-card form button {
+  width: 90%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  border: 1px solid rgb(172, 170, 170);
+  outline: none;
+  cursor: pointer;
+}
+#front-card h2,
+#back-card h2 {
+  font-size: 2em;
+}
+#front-card form > a {
+  color: grey;
+  text-decoration: underline;
+  font-size: 12px;
+}
+#front-card form span,
+#back-card form span {
+  font-size: 12px;
+  color: grey;
+}
+.rotate-btn {
+  font-size: 14px;
+  text-decoration: underline;
+  font-weight: bold;
+  color: teal;
+}
+#login-btn,
+#sign-btn {
+  background-color: teal;
+  color: white;
+}
+.google-btn {
+  color: white;
+  background-color: black;
+}
+#google-icon {
+  font-size: 18px;
+}
+#back-card {
+  transform: rotateY(180deg);
+  border-radius: 10px;
+}
+.form input {
+  transition: all 0.3s;
+}
+.input-hover {
+  transform: scale(1.3px);
+  box-shadow: 0 0 10px teal;
+}
+.form button {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+}
+#pass-icon-front {
+  font-size: 20px;
+  transform: translate(110px, -63px);
+  color: grey;
+  cursor: pointer;
+  position: absolute;
+}
+#pass-icon-back {
+  font-size: 20px;
+  color: grey;
+  cursor: pointer;
+  transform: translate(112px, -2px);
+  position: absolute;
+}
+
+/* end nav */
+/* start first banner */
+#first-banner {
+  width: 100%;
+  height: 100%;
+  margin: 80px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: var(--padding-banner);
+}
+#text {
+  max-width: var(--width-text);
+  height: var(--height-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  color: white;
+  transform: translateY(100px);
+}
+#text > h1 {
+  font-size: var(--fontSize-title);
+}
+#text input {
+  width: 70%;
+  padding: 15px 35px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  position: relative;
+  background-color: rgb(232, 232, 232);
+}
+#text input::placeholder {
+  font-weight: bolder;
+  font-size: 1.2em;
+}
+#circle,
+#Square {
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+  left: 2%;
+  color: black;
+  z-index: 1000;
+  font-weight: bolder;
+}
+#Square {
+  transform: translateY(75px);
+  font-size: 10px;
+  font-weight: bolder;
+}
+#text a {
+  color: black;
+  background-color: white;
+  width: 120px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+#send {
+  position: absolute;
+  color: black;
+  transform: translate(250px, 15px);
+  font-size: 25px;
+  cursor: pointer;
+}
+/* end first banner */
+
+/*  going to nav */
+#top {
+  background-color: white;
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+  box-shadow: 0 0 10px 1px grey;
+  transform: translateY(100px);
+  transition: all 0.5s;
+  z-index: 10000;
+}
+#top-icon {
+  color: black;
+  font-size: 2.8em;
+  transform: translateY(5px);
+}
+.show-top {
+  transform: translate(0) !important;
+}
+/* work with api */
+#api-products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 30px 0;
+}
+#api-products h1 {
+  color: white;
+  font-size: 2.5em;
+}
+#search-products {
+  width: 300px;
+  display: flex;
+  position: relative;
+}
+#search-products input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  box-shadow: 0 3px 10px 3px rgba(255, 255, 255, 0.2);
+}
+#search-products button {
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+.bx-refresh {
+  position: absolute;
+  left: 105%;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.rotate-refresh {
+  transform: translateY(-50%) rotateZ(360deg) !important;
+}
+#btns button {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  color: black;
+  font-weight: 900;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+#item-product {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  cursor: pointer;
+}
+#item-product div:hover {
+  transform: translateY(-8px) scale(1.05);
+}
+#item-product div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 18px;
+  background-color: white;
+  width: 300px;
+  height: 350px;
+  transition: all 0.5s;
+}
+#item-product div p {
+  font-weight: bolder;
+  color: green;
+}
+#item-product div img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+/* welcome dynamic  */
+#welcome {
+  padding: 15px;
+  background-color: white;
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+  color: black;
+  width: 150px;
+  height: 50px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#welcome h1 {
+  font-weight: bolder;
+}
+/* start second banner */
+section:is(#second-banner, #third-banner) {
+  width: 100%;
+  min-height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  padding: var(--padding-banner);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#drive {
+  max-width: var(--width-text);
+  max-height: var(--height-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#drive h2 {
+  font-size: var(--fontSize-title);
+}
+#drive p {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: black;
+}
+#started {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#started > a,
+.started > a {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  padding: 20px 30px;
+  transition: all 0.5s;
+  font-weight: bolder;
+}
+#started > a:hover,
+.started > a:hover {
+  opacity: 0.8;
+}
+#started p a,
+.started p a {
+  border-bottom: 1px solid rgb(204, 203, 203);
+  padding-bottom: 7px;
+  color: black;
+  position: relative;
+}
+#started p a::before,
+.started p a::before {
+  content: "";
+  background-color: black;
+  width: 0;
+  height: 2px;
+  top: 100%;
+  position: absolute;
+  transition: all 0.5s;
+}
+#started p a:hover::before,
+.started p a:hover::before {
+  width: 100%;
+}
+/* end second banner */
+/* half style for third banner here and the other half style in second banner  */
+#uber-text {
+  max-width: var(--width-text);
+  height: var(--height-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  text-align: left;
+}
+#uber-text h2 {
+  font-size: var(--fontSize-title);
+  opacity: 0.7;
+}
+#uber-text p {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: black;
+}
+.started {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+/* end the style to third banner */
+/* start auto slider */
+#auto-slider {
+  width: 100%;
+  height: 500px;
+  padding: 25px;
+  display: flex;
+  gap: 20px;
+}
+#auto-slider > div {
+  flex: 1;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 1s;
+}
+#auto-slider > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.show-slider {
+  flex: 9 !important;
+}
+/* end auto slider */
+
+/* start auto slider mobile */
+#auto-slider-mobile {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  margin: 20px 0;
+  display: none;
+}
+#auto-slider-mobile div {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  border-radius: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  padding: 40px;
+}
+#auto-slider-mobile div img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.show-slider-mobile {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+/* start style to Qr code section */
+#qr-code {
+  width: 100%;
+  min-height: 350px;
+  background-color: rgba(255, 254, 254, 0.959);
+  padding: 20px 50px;
+}
+#qr-code > h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+#qr-code > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+#qr-code > div > div {
+  width: 550px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  background-color: white;
+  cursor: pointer;
+  white-space: nowrap;
+}
+#qr-code > div > div:hover .arrow {
+  transform: translateX(10px);
+}
+.arrow {
+  font-size: 2em;
+  transition: all 0.5s;
+}
+.uber-qr-code {
+  transform: translateX(-125px);
+  width: 30px;
+  height: 30px;
+}
+/* end style to Qr code section */
+
+/* start footer */
+footer {
+  padding: 50px 100px;
+}
+footer a {
+  color: white;
+  transition: all 0.3s;
+}
+footer li a:hover {
+  color: grey;
+}
+/* start Imprint style */
+#Imprint {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 20px; */
+}
+#Imprint > div > ul {
+  direction: rtl;
+}
+#Imprint > div > h1 {
+  font-size: 2em;
+  margin-bottom: 35px;
+}
+#Imprint > div > p {
+  font-size: 18px;
+}
+#Imprint > div > ul > li {
+  margin-top: 15px;
+}
+/* end Imprint style */
+
+/* start products  */
+#products-ul {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+#products-ul div {
+  width: 100px;
+  min-height: 300px;
+}
+#products-ul > div ul li {
+  margin-top: 15px;
+  white-space: nowrap;
+}
+#products-ul h2 {
+  color: white;
+  font-size: 1.2em;
+  white-space: nowrap;
+}
+/* end products  */
+/* start icon ul */
+#icon-ul {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px;
+  gap: 20px;
+  padding: 20px;
+}
+#icon-ul div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  min-width: 300px;
+  height: 100px;
+}
+#icon-ul ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+#icon-ul div ul li {
+  padding: 0px;
+  border-radius: 8px;
+  transition: all 0.5s;
+}
+#icon-ul div ul li:hover {
+  background-color: rgba(238, 237, 237, 0.129);
+  color: white;
+}
+#icon-ul div ul li:hover a {
+  color: white;
+}
+.footer-icon {
+  font-size: 20px;
+  padding: 18px;
+}
+.german {
+  padding: 10px 15px !important;
+}
+.german:hover {
+  background-color: rgba(238, 237, 237, 0.129);
+}
+footer > div {
+  min-width: 300px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+}
+#Technologies {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#Technologies p {
+  color: grey;
+  font-size: 12px;
+}
+#Technologies ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: grey;
+  font-size: 12px;
+}
+
+/* style to scrollbar window */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: grey;
+}
+
+/* media query to make website responsive */
+@media screen and (max-width: 850px) {
+  nav ul li:not(#uber, .login) {
+    display: none;
+    text-align: center;
+  }
+  #hamburger-menu {
+    display: inline-block;
+  }
+  footer {
+    padding: 20px 30px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .image-banner {
+    width: 400px;
+    height: 400px;
+  }
+  section:is(#first-banner, #second-banner, #third-banner) {
+    padding: 20 10px;
+  }
+  #first-banner {
+    margin: none !important;
+  }
+  footer > div {
+    justify-content: center;
+  }
+  #icon-ul {
+    justify-content: center;
+    margin: none !important;
+  }
+  #products-ul div {
+    min-width: 100px;
+    min-height: 100px;
+  }
+  #Imprint > div ul {
+    text-align: left;
+    margin-bottom: 20px;
+    min-width: 200px;
+  }
+  nav {
+    padding: 0 10px;
+  }
+  footer {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  footer section {
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 500px) {
+  :root {
+    --fontSize-title: 2.5em;
+    --padding-banner: 0 10px;
+  }
+  #qr-code {
+    display: none;
+  }
+  #auto-slider {
+    display: none;
+  }
+  #auto-slider-mobile {
+    display: inline-block;
+  }
+  .link-btn {
+    padding: 10px !important;
+  }
+  .started p {
+    font-size: 12px !important;
+  }
+  .image-banner {
+    width: 250px;
+    height: 250px;
+  }
+  .icon-banner {
+    display: none;
+  }
+  #item-product div {
+    width: 200px;
+    height: 250px;
+    gap: 5px;
+  }
+  #search-products {
+    width: 200px;
+  }
+  footer div a img {
+    width: 70px;
+  }
+  #perspective {
+    width: 300px;
+    min-height: 300px;
+  }
+  #front-card form,
+  #back-card form {
+    gap: 5px;
+  }
+  #front-card,
+  #back-card {
+    height: 300px;
+  }
+  #front-card form .pass-icon,
+  #back-card form .pass-icon {
+    display: none;
+  }
+  #card {
+    min-height: 300px;
+  }
+  #close-btn {
+    transform: translateY(-20px);
+  }
+}

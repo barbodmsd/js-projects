@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+        <!-- start letter to capital -->
+    <div id="word-box" class="box">
+        <h2>Enter a word to capitalize the first letter</h2>
+        <div>
+          <input
+            type="text"
+            id="letter-inp"
+            placeholder="Enter word!"
+            autofocus
+          />
+          <button id="letter-btn">Submit</button>
+        </div>
+        <p id="capital"></p>
+      </div>
+      <!-- end letter to capital -->
+  
+      <!-- strat calc -->
+      <div id="calc-box"  class="box">
+        <h2>Enter the number and operator you want</h2>
+        <div>
+          <input
+            type="text"
+            id="calc-inp-number"
+            placeholder="Enter number with: -"
+          />
+          <input
+            type="text"
+            id="calc-inp-operator"
+            placeholder="Enter operator : + - * / %"
+          />
+          <button id="calc-btn">Submit</button>
+        </div>
+        <p id="answer"></p>
+      </div>
+      <!-- end calc -->
+  
+      <!-- strat day -->
+      <div id="day" class="box" >
+          <h2>Write the day and open/closed</h2>
+        <div>
+          <input type="text" id="day-inp" placeholder="mon-tu-wed-th-fri-sat-sun:"/>
+          <input type="text" id="day-open-or-close" placeholder="open/close:">
+          <button id="day-btn">Submit</button>
+        </div>
+        <p id="result"></p>
+      </div>
+      <!-- ens day -->
+    </section>
+    <script src="js/script.js"></script>
+  </body>
+</html>

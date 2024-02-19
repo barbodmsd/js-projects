@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+/* strat nav */
+nav{
+    height: 60px;
+    background-color: #634875;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 150px;
+}
+nav >ul{
+    display: flex;
+    gap: 20px;
+}
+nav ul li a ,#menu ul li a{
+    font-size: 20px;
+    color: #dfe6ea;
+    font-weight: bolder;
+    border-bottom: 2px solid transparent;
+    transition: all 0.5s;
+}
+nav ul li:hover a ,#menu ul li:hover a{
+    border-bottom: 2px solid #dfe6ea ;
+    padding-bottom: 3px;
+}
+#img {
+    width: 50px;
+    height: 50px;
+}
+#img img{
+    width: 100%;
+    height:100%;
+    transition: all 1s;
+}
+#img:hover img{
+    transform: rotatey(180deg);
+}
+#open{
+    font-size: 20px;
+    color: #dfe6ea;
+    cursor: pointer;
+    display: none;
+}
+#menu-item{
+    background-color: #634875;
+    width: 250px;
+    height: 300px;
+    position: fixed;
+    top: 65px;
+    right: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 20px 20px 0px;
+    transition: all 1s;
+}
+.show-menu-item{
+    position: fixed;
+    top: 65px;
+    right: 100%;
+    transform: translate(100%);
+}
+#menu-item ul li{
+    margin-bottom: 20px;
+}
+#close{
+    font-size: 25px;
+    color: #dfe6ea;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+}
+/* end nav */
+
+/* start input */
+#input{
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+}
+#inp{
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+    border: none;
+    position: relative;
+    width: 250px;
+    outline: none;
+}
+#submit-btn{
+    position: absolute;
+    border-radius: 20px;
+    background-color: #634875;
+    color: #dfe6ea;
+    font-weight: bolder;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+
+    top: 50%;
+    right: 0.5%;
+    transform: translate(-50%,-50%);
+}
+/* end input */
+
+@media screen and (max-width:900px) {
+    #ul-item{
+        display: none;
+    }
+    #open{
+        display: inline-block;
+    }
+}

@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 2000px;
+  font-family: sans-serif;
+}
+/* start form */
+#form {
+  width: 400px;
+  min-height: 350px;
+  margin: 200px auto;
+  margin-top: 300px;
+  border: 1px solid white;
+  background-color: grey;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+#flight-number,
+#name {
+  padding: 8px 5px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+::placeholder {
+  font-weight: bolder;
+}
+#air-lines {
+  font-weight: bolder;
+  border-radius: 20px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.option {
+  display: flex;
+  border-radius: 20px;
+  line-height: 10px;
+}
+#add,
+#print {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  font-weight: bolder;
+  cursor: pointer;
+}
+h2,
+p {
+  color: whitesmoke;
+}
+/* end form */
+/* start barbod */
+#barbod {
+  width: 300px;
+  height: 250px;
+  margin: 50px auto;
+  backdrop-filter: blur(5px);
+  display: flex;
+  border-radius: 20px;
+  border: 1px solid white;
+  background-color: gray;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+#barbod input,#barbod button {
+  border-radius: 20px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-weight: bolder;
+  cursor: pointer;
+}
+/* end barbod */

@@ -1,0 +1,128 @@
+:root {
+  --text-c: #4a89b9;
+  --box-c: #8fc2e5;
+}
+@font-face {
+  font-family: openSans;
+  src: url("../font/OpenSans-Medium.ttf") format("ttf"),
+    url("../font/OpenSans_Condensed-Medium.woff") format("woff"),
+    url("../font/OpenSans_Condensed-Medium.woff2") format("woff2"),
+    url("../font/OpenSans_Condensed-Medium.eot") format("eot");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 2000px;
+  font-family: openSans;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+/* start letter to capital */
+#word-box {
+  width: 500px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+#word-box h2,
+#word-box p,
+#calc-box h2,
+#calc-box p,
+#day h2,
+#day p {
+  color: var(--text-c);
+  text-shadow: 2px 5px 7px var(--text-c);
+}
+#word-box div {
+  position: relative;
+}
+#letter-inp {
+  box-shadow: 1px 1px 7px 2px var(--box-c);
+  padding: 10px 40px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+#letter-btn {
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 20px;
+  padding: 7px 10px;
+  border: none;
+  outline: none;
+  background-color: var(--text-c);
+  color: whitesmoke;
+  font-weight: bolder;
+  cursor: pointer;
+}
+::placeholder {
+  font-weight: bolder;
+  color: var(--text-c);
+}
+/* end letter to capital */
+
+/* strat clc and day*/
+#calc-box,
+#day {
+  width: 400px;
+  height: 300px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+#calc-inp-number,
+#calc-inp-operator,
+#day-inp,
+#day-open-or-close {
+  box-shadow: 1px 1px 7px 2px var(--box-c);
+  padding: 10px 40px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+#calc-box div,
+#day div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#calc-btn,
+#day-btn {
+  border-radius: 20px;
+  padding: 7px 10px;
+  border: none;
+  outline: none;
+  background-color: var(--text-c);
+  color: whitesmoke;
+  font-weight: bolder;
+  cursor: pointer;
+  box-shadow: 1px 1px 7px 2px var(--box-c);
+}
+/* end calc and day*/
+.box {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+  transition: all 0.5s;
+}
+.show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}

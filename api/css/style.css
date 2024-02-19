@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* start countries */
+#rest-countries {
+  width: 80%;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+div {
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.2);
+}
+img {
+  width: 100%;
+  height: 60%;
+}
+h2,
+p {
+  text-align: center;
+}
+#borders {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 100px 0;
+}
+#title {
+  visibility: hidden;
+}
+/* end countries */
+
+/* start weather */
+#weather {
+  width: 60%;
+  margin: 100px auto;
+  border: 1px solid grey;
+  padding: 50px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+input {
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.2);
+}
+.main {
+  display: inline-block;
+  width: 300px;
+  height: 250px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  text-align: right;
+}
+.sun{
+ 
+  width: 150px;
+  height: 150px;
+  position: relative;
+  animation-name: sun;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+@keyframes sun {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+.sun-cloud{
+  position: absolute;
+  width: 200px;
+  height: auto;
+  animation-name: cloud;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+@keyframes cloud {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(50px);
+  }
+}
+/* end weather */
+/* start asos */
+#products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+#c{
+  border-radius: 20px;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.2);
+  display: grid;
+  place-items: center;
+}
+/* end asos */
