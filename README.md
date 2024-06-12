@@ -1,1 +1,3 @@
-Js exercises and projects for when I was learning
+# Js projects
+
+### `java script` exercises and projects for when I was learning
